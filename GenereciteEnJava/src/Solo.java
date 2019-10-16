@@ -2,6 +2,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+
 import java.util.Set;
 public class Solo <T>{
 
@@ -45,7 +47,7 @@ public class Solo <T>{
 			System.out.println("removed");
 		}
 		System.out.println(list);*/
-		Map<Integer,String> map=new HashMap<Integer,String>(); 
+		/*Map<Integer,String> map=new HashMap<Integer,String>(); 
 		map.put(1, "un");
 		map.put(2, "deux");
 		map.put(3, "trois");
@@ -57,10 +59,26 @@ public class Solo <T>{
 		while(it.hasNext()) {
 			Integer k=(Integer)it.next();
 			
-			System.out.println(" key  = "+k+" value = "+map.get(k));
+			System.out.println(" key  = "+k+"  value = "+map.get(k));}
+			*/
+		
+		Map<Integer,String>mp=new HashMap<Integer,String>();
+		mp.put(1, "a");
+		mp.put(1, "b");
+		mp.put(1, "c");
+		mp.put(3, "d");
+		Set<Entry<Integer,String>> setEntry=mp.entrySet();
+		
+		Iterator EntryIterator =setEntry.iterator();
+		System.out.println("parcours d une Map avec setEntry :");
+		
+		
+		while(EntryIterator.hasNext()) {
+			Entry<Integer,String> entry=(Entry<Integer,String>) EntryIterator.next();
+			System.out.println(" key  = "+entry.getKey()+"  value = "+entry.getValue());
 			
 		}
-		
+	
 		
 
 	
