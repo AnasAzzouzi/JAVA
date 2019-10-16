@@ -50,7 +50,7 @@ public class CD implements Comparable<CD> {
 
 	@Override
 	public int compareTo(CD C) {
-		// TODO Auto-generated method stub
+		
 		return(int)(C.prix-this.prix);
 	}
 	

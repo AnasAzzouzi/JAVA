@@ -31,12 +31,18 @@ public class Trie {
 		list.add(C3);
 		list.add(C4);
 			
-		Collections.sort(list);
+		System.out.println("Avant le tri");
 		Iterator it = list.iterator();
 		while(it.hasNext()) {
 			System.out.println(it.next().toString());
 		}
-
+		
+		Collections.sort(list);
+		Iterator it2 = list.iterator();
+		System.out.println("Apres le tri");
+		while(it2.hasNext()) {
+			System.out.println(it2.next().toString());
+		}
 		
 
 	}
