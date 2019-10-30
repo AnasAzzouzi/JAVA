@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -53,8 +54,16 @@ public class Test {
 		}catch(Exception e){
 			
 			System.out.print("error reading file ");
+		}finally {
+			try {
+				fis.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		// Write On File
+		
 		FileOutputStream fos=null;
 		File f2 = new File("C:\\Users\\Client6\\nvdossier\\JavaProj\\JAVA\\ExempleCours\\fichierBis.txt");
 		String content =c;
