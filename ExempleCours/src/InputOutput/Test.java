@@ -1,10 +1,9 @@
 package InputOutput;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+
 import java.util.Scanner;
+
+
 
 
 public class Test {
@@ -37,7 +36,8 @@ public class Test {
 				}
 	else  System.out.print("ce fichier n'existe pas ");*/
 		// Read File
-		String c="";
+/*		String c="";
+		long t=0;
 		FileInputStream fis=null;
 		File f = new File("C:\\Users\\Client6\\nvdossier\\JavaProj\\JAVA\\ExempleCours\\file1.txt");
 		//if(f.exists()) {
@@ -47,8 +47,11 @@ public class Test {
 		int n;
 		while((n= fis.read(buff))>=0) {
 			for (int i=0;i<n;i++) {
+				
 			System.out.print((char) buff[i]);
+			t=System.currentTimeMillis();
 			c=c+(char) buff[i];
+			
 								}
 			}
 		}catch(Exception e){
@@ -72,18 +75,32 @@ public class Test {
 			fos =new FileOutputStream(f2);
 			fos.write(contentByte);
 			fos.close();
-			//System.out.println("done");
+			
+			System.out.println(t);
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
-
-}
-	}
-
-
+		*/
+				BufferedInputStream bis = null;
+				BufferedOutputStream bos=null;
+				File f3 = new File("C:\\Users\\Client6\\nvdossier\\JavaProj\\JAVA\\ExempleCours\\file1.txt");
+				File f4 = new File("C:\\Users\\Client6\\nvdossier\\JavaProj\\JAVA\\ExempleCours\\fichierBis.txt");
+				try {
+					 bis = new BufferedInputStream(new FileInputStream(f3));
+					 bos = new BufferedOutputStream( new FileOutputStream(f4));
+					while(bis.available()>0)
+					{
+						System.out.print((char)bis.read());
+						//bos.write((char)bis.read());
+						
+					}
+						}catch(Exception e) {
+					}
+				
+	
+	
+	}}
 	
 
