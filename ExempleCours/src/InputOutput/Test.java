@@ -92,7 +92,10 @@ public class Test {
 					 bos = new BufferedOutputStream( new FileOutputStream(f4));
 					while(bis.available()>0)
 					{
+						long t=System.currentTimeMillis();
+						
 						System.out.print((char)bis.read());
+						System.out.println(t);
 						//bos.write((char)bis.read());
 						
 					}
